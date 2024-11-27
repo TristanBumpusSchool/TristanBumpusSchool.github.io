@@ -1,1 +1,126 @@
 @import url(./restet.css);
+
+/*Animations*/
+
+/*Types*/
+
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  background-image: linear-gradient(90deg, red, blue);
+}
+
+main {
+  margin: 0 25vw;
+}
+
+header {
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  background-color: black;
+  top: 0;
+  width: 100vw;
+  height: 5vh;
+  align-content: center;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 95vh;
+  padding-top: 5vh;
+  background-color: rebeccapurple;
+  scroll-snap-align: start;
+}
+
+img {
+  width: 30%;
+  height: fit-content;
+  margin: 1vh 1vh;
+}
+
+h1 {
+  text-align: center;
+  width: 50vw;
+  font-size: 5vw;
+}
+
+h2 {
+  text-align: center;
+  width: 50vw;
+  font-size: 1.5vw;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2vw;
+  margin-bottom: 5vh;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2vw;
+  color: aliceblue;
+}
+
+a:hover {
+  transition: all 200ms ease;
+  transform: scale(1.2) translatey(-0.5vh);
+}
+
+input {
+  display: block;
+  margin: 5vh auto;
+}
+
+input:hover {
+  transform: scale(1.2);
+}
+
+/*Class*/
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*IDs*/
+
+#menu {
+  display: none;
+  background-color: aliceblue;
+  padding: 2vh;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+#menu_button {
+  position: absolute;
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+}
+
+#menu_button:hover #menu {
+  display: flex;
+}
+
+#landing {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#galery {
+  height: 110vw;
+}
