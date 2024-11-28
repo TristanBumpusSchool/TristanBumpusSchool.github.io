@@ -118,6 +118,17 @@ label {
   text-align: center;
 }
 
+video {
+  width: 45vw;
+  align-self: center;
+  justify-self: center;
+  margin: auto;
+}
+
+footer h2 {
+  width: 100vw;
+}
+
 /*Scroll bar*/
 
 ::-webkit-scrollbar {
