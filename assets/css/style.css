@@ -18,6 +18,7 @@ main {
 header {
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 nav {
@@ -26,6 +27,7 @@ nav {
   width: 100vw;
   height: 5vh;
   align-content: center;
+  z-index: 2;
 }
 
 ul {
@@ -35,7 +37,7 @@ ul {
 
 section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   height: 95vh;
   padding-top: 5vh;
@@ -47,6 +49,15 @@ img {
   width: 30%;
   height: fit-content;
   margin: 1vh 1vh;
+  filter: grayscale();
+  z-index: 0;
+}
+
+img:hover {
+  transition: all ease 200ms;
+  filter: saturate();
+  transform: scale(2) translateY(-2vw);
+  z-index: 3;
 }
 
 h1 {
@@ -61,10 +72,17 @@ h2 {
   font-size: 1.5vw;
 }
 
+h3 {
+  text-align: center;
+  width: 50vw;
+  font-size: 1.2vw;
+}
+
 p {
   text-align: center;
   font-size: 1.2vw;
   margin-bottom: 5vh;
+  text-justify: newspaper;
 }
 
 a {
@@ -88,11 +106,45 @@ input:hover {
   transform: scale(1.2);
 }
 
+form {
+  width: 50vw;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 30vh;
+}
+
+label {
+  display: block;
+  text-align: center;
+}
+
+/*Scroll bar*/
+
+::-webkit-scrollbar {
+  width: 1vw;
+  border-radius: 1rem;
+  margin-right: 1vw;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 1rem;
+}
+
 /*Class*/
 
 .flex {
   display: flex;
   justify-content: space-evenly;
+}
+
+.column {
+  width: 20vw;
+  margin-right: 5vw;
 }
 
 /*IDs*/
