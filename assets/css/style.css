@@ -11,10 +11,6 @@ body {
   background-image: linear-gradient(90deg, red, blue);
 }
 
-main {
-  margin: 0 25vw;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -43,9 +39,10 @@ section {
   padding-top: 5vh;
   background-color: rebeccapurple;
   scroll-snap-align: start;
+  margin: 0 25vw;
 }
 
-img {
+main img {
   width: 30%;
   height: fit-content;
   margin: 1vh 1vh;
@@ -53,10 +50,10 @@ img {
   z-index: 0;
 }
 
-img:hover {
+main img:hover {
   transition: all ease 200ms;
   filter: saturate();
-  transform: scale(2) translateY(-2vw);
+  transform: scale(1.2) translateY(-2vw);
   z-index: 3;
 }
 

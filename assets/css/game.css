@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/*Basics*/
+
+#extra_game p {
+  font-family: "Audiowide";
+  text-align: center;
+  color: aliceblue;
+}
+
+/*Classes*/
+
+#extra_game .tile {
+  image-rendering: pixelated;
+  width: 4vw;
+  height: 4vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/default1.png);
+  z-index: 1;
+}
+
+#extra_game .tile:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+#extra_game .button {
+  image-rendering: pixelated;
+  width: 4vw;
+  height: 4vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#extra_game .button:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+#extra_game .empty_tile {
+  background-image: url(../img/default1.png);
+}
+
+#extra_game .player {
+  content: url(../img/Player_right.png);
+}
+
+#extra_game .player:hover {
+  transform: scale(1);
+}
+
+#extra_game .button_player {
+  background-color: aliceblue;
+  background-image: url(../img/Player_right.png);
+}
+
+#extra_game .locked {
+  filter: grayscale(0.5);
+  outline: gray 0.3vh solid;
+  z-index: 2;
+}
+
+#extra_game .locked:hover {
+  transform: scale(1);
+}
+
+#extra_game .enemy {
+  content: url(../img/enemy.png);
+}
+
+#extra_game .enemy:hover {
+  transform: scale(1);
+}
+
+#extra_game .wall {
+  content: url(../img/Wall.png);
+}
+
+#extra_game .bounce {
+  background-image: url(../img/bounce.png);
+}
+
+#extra_game .goal {
+  background-image: url(../img/goal.png);
+}
+
+#extra_game .goal:hover {
+  transform: scale(1);
+}
+
+#extra_game .arrow {
+  background-image: url(../img/ArrowR.png);
+  background-color: green;
+}
+
+#extra_game .left {
+  rotate: 180deg;
+}
+
+#extra_game .down {
+  rotate: 90deg;
+}
+
+#extra_game .up {
+  rotate: 270deg;
+}
+
+#extra_game .reset {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/Reset.png);
+}
+
+#extra_game .start {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/Play.png);
+}
+
+#extra_game .paused {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/Pause.png);
+}
+
+#extra_game .inline {
+  display: inline;
+}
+
+/*IDs*/
+
+#extra_game {
+  display: block;
+  max-height: 95vh;
+  margin: 0;
+  max-width: 100vw;
+  background-color: green;
+}
+
+#game_board {
+  display: flex;
+  width: 36vw;
+  height: 36vw;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+}
+
+#lvl_buttons {
+  display: flex;
+  width: 4vw;
+  height: 36vw;
+  flex-flow: column wrap;
+  align-content: center;
+  background-color: black;
+}
+
+#game {
+  gap: 8vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100vw;
+  max-height: 95vw;
+}
+
+#selected_container img {
+  display: block;
+  justify-self: center;
+}
+
+#selected {
+  width: 4vw;
+  height: 4vw;
+}
+
+#selected_container img:hover {
+  transform: scale(1);
+}
+
+/*Special classes*/
+
+.invisible {
+  display: none;
+}

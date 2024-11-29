@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TP Final</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/game.css" />
   </head>
   <body>
     <header class="flex">
@@ -17,6 +18,7 @@
           <li><a href="#article">Article</a></li>
           <li><a href="#galery">Galerie</a></li>
           <li><a href="#video">Vidéo</a></li>
+          <li><a href="#extra_game">Jeux</a></li>
           <li><a href="#footer">Pied de la page</a></li>
         </ul>
       </nav>
@@ -55,10 +57,18 @@
         <h2>Tableau</h2>
       </section>
       <section id="article">
-        <h1>Article</h1>
+        <h1>Porfolio</h1>
         <div class="flex">
-          <p class="column">Test</p>
-          <p class="column">Test</p>
+          <p class="column">
+            Pendant cette année j'ai faite beaucoup de différent travaux.
+            Généralement j'ai adoré ma première session et j'ai hate pour la
+            prechaine.
+          </p>
+          <p class="column">
+            J'ai pas grand autre chose a dire, alors ce paragraphe est juste
+            pour mantré que les deux paragraphe marche. Alors vous pouvez
+            continué a lire, mais le reste va pas être très important.
+          </p>
         </div>
       </section>
       <section id="galery">
@@ -81,11 +91,33 @@
         <h3>Un film créé par Tristan Bumpus Xavier et Loïc</h3>
       </section>
     </main>
+
     <footer>
+      <section id="extra_game">
+        <p id="lvl"></p>
+        <p id="desc"></p>
+        <div id="game">
+          <div id="lvl_buttons"></div>
+
+          <div id="game_board"></div>
+
+          <div id="selected_container">
+            <p>Selected</p>
+            <p>Block plaçer:</p>
+            <p id="blocks_placed"></p>
+          </div>
+        </div>
+      </section>
+
       <section id="footer">
         <h2>Pied de la page</h2>
         <h3>Ceci est la fin merci pour tout lire et bonne journée</h3>
       </section>
     </footer>
+
+    <script src="./Assets/JS/variables.js"></script>
+    <script src="./Assets/JS/gamefunctions.js"></script>
+    <script src="./Assets/JS/inputs_and_board_creation.js"></script>
+    <script src="./Assets/JS/games.js"></script>
   </body>
 </html>
