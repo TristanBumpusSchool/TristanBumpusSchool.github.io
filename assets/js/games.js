@@ -27,5 +27,3 @@ function playing() {
     }
   }
 }
-
-print(document.querySelector("#extra_game"));

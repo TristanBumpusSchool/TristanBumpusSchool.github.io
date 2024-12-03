@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+/*Medias*/
+
+:root {
+  --oriantation: row;
+  --tile_size: 4vw;
+  --board_size: 36vw;
+  --button_width: 4vw;
+  --button_height: 36vw;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --oriantation: column;
+    --tile_size: 4vh;
+    --board_size: 36vh;
+    --button_width: 36vh;
+    --button_height: 4vh;
+  }
+}
+
 /*Basics*/
 
 #extra_game p {
@@ -8,12 +28,20 @@
   color: aliceblue;
 }
 
+#extra_game h2 {
+  font-family: "Audiowide";
+  text-align: center;
+  color: aliceblue;
+  width: auto;
+  margin-bottom: 0.5vh;
+}
+
 /*Classes*/
 
 #extra_game .tile {
   image-rendering: pixelated;
-  width: 4vw;
-  height: 4vw;
+  width: var(--tile_size);
+  height: var(--tile_size);
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../img/default1.png);
@@ -27,8 +55,8 @@
 
 #extra_game .button {
   image-rendering: pixelated;
-  width: 4vw;
-  height: 4vw;
+  width: var(--tile_size);
+  height: var(--tile_size);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -140,30 +168,33 @@
 
 #game_board {
   display: flex;
-  width: 36vw;
-  height: 36vw;
+  width: var(--board_size);
+  height: var(--board_size);
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
   background-color: black;
+  align-self: center;
 }
 
 #lvl_buttons {
   display: flex;
-  width: 4vw;
-  height: 36vw;
+  width: var(--button_width);
+  height: var(--button_height);
   flex-flow: column wrap;
   align-content: center;
   background-color: black;
+  align-self: center;
 }
 
 #game {
   gap: 8vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: var(--oriantation);
   justify-content: center;
+  align-content: center;
   max-width: 100vw;
-  max-height: 95vw;
+  max-height: 95vh;
 }
 
 #selected_container img {
@@ -172,8 +203,8 @@
 }
 
 #selected {
-  width: 4vw;
-  height: 4vw;
+  width: var(--tile_size);
+  height: var(--tile_size);
 }
 
 #selected_container img:hover {

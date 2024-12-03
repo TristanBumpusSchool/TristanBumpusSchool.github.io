@@ -1,5 +1,41 @@
 @import url(./restet.css);
 
+/*Medias*/
+
+:root {
+  --large_font: 5vw;
+  --mid_font: 1.5vw;
+  --small_font: 1.2vw;
+  --section_margin: 15vw;
+  --section_width: 70vw;
+  --img_margin: 1vh;
+  --galery_height: 110vw;
+  --link_size: 1.2vw;
+  --article_width: 30vw;
+  --article_margin: 2.5vw;
+  --big_height: 50vh;
+  --big_width: fit-content;
+  --big_translate: 25vw;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --large_font: 6vh;
+    --mid_font: 2.5vh;
+    --small_font: 2.2vh;
+    --section_margin: 0;
+    --section_width: 100vw;
+    --img_margin: 1vw;
+    --galery_height: 110vh;
+    --link_size: 1.2vh;
+    --article_width: 40vw;
+    --article_margin: 5vw;
+    --big_height: fit-content;
+    --big_width: 50vw;
+    --big_translate: 50%;
+  }
+}
+
 /*Animations*/
 
 /*Types*/
@@ -23,12 +59,15 @@ nav {
   width: 100vw;
   height: 5vh;
   align-content: center;
-  z-index: 2;
+  z-index: 4;
 }
 
 ul {
+  width: 100vw;
+  height: 5vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-content: center;
 }
 
 section {
@@ -39,53 +78,37 @@ section {
   padding-top: 5vh;
   background-color: rebeccapurple;
   scroll-snap-align: start;
-  margin: 0 25vw;
-}
-
-main img {
-  width: 30%;
-  height: fit-content;
-  margin: 1vh 1vh;
-  filter: grayscale();
-  z-index: 0;
-}
-
-main img:hover {
-  transition: all ease 200ms;
-  filter: saturate();
-  transform: scale(1.2) translateY(-2vw);
-  z-index: 3;
+  margin: 0 var(--section_margin);
 }
 
 h1 {
   text-align: center;
-  width: 50vw;
-  font-size: 5vw;
+  width: var(--section_width);
+  font-size: var(--large_font);
 }
 
 h2 {
   text-align: center;
-  width: 50vw;
-  font-size: 1.5vw;
+  width: var(--section_width);
+  font-size: var(--mid_font);
 }
 
 h3 {
   text-align: center;
-  width: 50vw;
-  font-size: 1.2vw;
+  width: var(--section_width);
+  font-size: var(--small_font);
 }
 
 p {
   text-align: center;
-  font-size: 1.2vw;
+  font-size: var(--small_font);
   margin-bottom: 5vh;
   text-justify: newspaper;
 }
 
 a {
-  display: block;
   text-decoration: none;
-  font-size: 1.2vw;
+  font-size: var(--link_size);
   color: aliceblue;
 }
 
@@ -96,7 +119,7 @@ a:hover {
 
 input {
   display: block;
-  margin: 5vh auto;
+  margin: 2vh auto;
 }
 
 input:hover {
@@ -104,10 +127,9 @@ input:hover {
 }
 
 form {
-  width: 50vw;
+  width: var(--section_width);
   align-self: center;
   justify-self: center;
-  margin-bottom: 30vh;
 }
 
 label {
@@ -116,14 +138,28 @@ label {
 }
 
 video {
-  width: 45vw;
+  width: 90%;
   align-self: center;
   justify-self: center;
   margin: auto;
 }
 
-footer h2 {
+footer h2,
+footer h3 {
   width: 100vw;
+}
+
+table {
+  border: 1px solid black;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
 }
 
 /*Scroll bar*/
@@ -151,15 +187,41 @@ footer h2 {
 }
 
 .column {
-  width: 20vw;
-  margin-right: 5vw;
+  width: var(--article_width);
+  margin: var(--article_margin);
+}
+
+.big {
+  display: block;
+  width: var(--big_width);
+  height: var(--big_height);
+  left: 0;
+}
+
+.inv {
+  display: none;
+}
+
+.galery_imgs {
+  width: 30%;
+  height: fit-content;
+  margin: var(--img_margin);
+  filter: grayscale();
+  z-index: 0;
+}
+
+.galery_imgs:hover {
+  transition: all ease 200ms;
+  filter: saturate();
+  transform: scale(1.2) translateY(-2vw);
+  z-index: 5;
 }
 
 /*IDs*/
 
 #menu {
   display: none;
-  background-color: aliceblue;
+  background-color: green;
   padding: 2vh;
   flex-direction: column;
   gap: 0.5vh;
@@ -181,6 +243,34 @@ footer h2 {
   justify-content: space-between;
 }
 
+#footer {
+  max-width: 100vw;
+  margin: 0;
+}
+
 #galery {
-  height: 110vw;
+  height: auto;
+  min-height: 100vh;
+}
+
+#table {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#subscipe {
+  background-color: transparent;
+  border: none;
+  font-size: var(--mid_font);
+}
+
+#big_img {
+  position: fixed;
+  filter: none;
+  top: 5vh;
+  z-index: 6;
+}
+
+#logo {
+  height: 5vh;
 }

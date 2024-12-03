@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="./assets/css/game.css" />
   </head>
   <body>
-    <header class="flex">
+    <header>
       <!--Landing-->
       <nav>
         <ul>
-          <li><a href="#landing">Accueil</a></li>
-          <li><a href="#inscription">Inscription</a></li>
-          <li><a href="#table">Tableau</a></li>
-          <li><a href="#article">Article</a></li>
-          <li><a href="#galery">Galerie</a></li>
-          <li><a href="#video">Vidéo</a></li>
-          <li><a href="#extra_game">Jeux</a></li>
-          <li><a href="#footer">Pied de la page</a></li>
+          <li><img id="logo" src="./assets/img/Tims.png" alt="" /></li>
+          <li>
+            <div id="menu_button">
+              <a href="">Jump</a>
+              <div id="menu">
+                <a href="#landing">Accueil</a>
+                <a href="#inscription">Inscription</a>
+                <a href="#table">Tableau</a>
+                <a href="#article">Article</a>
+                <a href="#galery">Galerie</a>
+                <a href="#video">Vidéo</a>
+                <a href="#extra_game">Jeux</a>
+                <a href="#footer">Pied de la page</a>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -38,6 +46,7 @@
       <section id="inscription">
         <h2>Inscription</h2>
         <h3>Email Newsletter</h3>
+
         <form method="post">
           <label for="Nom">Nom:</label>
           <input id="Nom" name="Nom" type="text" placeholder="Nom" required />
@@ -49,40 +58,117 @@
             placeholder="email"
             required
           />
+          <label for="num">Quell est ton nombre préférer:</label>
+          <input
+            type="number"
+            name="num"
+            id="email"
+            placeholder="email"
+            required
+          />
           <input type="reset" value="Recommence" />
-          <input type="submit" value="✅" />
+          <input id="subscipe" type="submit" value="✅" />
         </form>
       </section>
       <section id="table">
         <h2>Tableau</h2>
+        <table>
+          <tr>
+            <th>Hello</th>
+          </tr>
+          <tr>
+            <td>test</td>
+            <td>test2</td>
+            <td>test2</td>
+            <td>test2</td>
+          </tr>
+          <tr>
+            <td>test</td>
+            <td>test2</td>
+            <td>test2</td>
+            <td>test2</td>
+          </tr>
+          <tr>
+            <td>test</td>
+            <td>test2</td>
+            <td>test2</td>
+            <td>test2</td>
+          </tr>
+        </table>
       </section>
       <section id="article">
         <h1>Porfolio</h1>
         <div class="flex">
-          <p class="column">
-            Pendant cette année j'ai faite beaucoup de différent travaux.
-            Généralement j'ai adoré ma première session et j'ai hate pour la
-            prechaine.
-          </p>
-          <p class="column">
-            J'ai pas grand autre chose a dire, alors ce paragraphe est juste
-            pour mantré que les deux paragraphe marche. Alors vous pouvez
-            continué a lire, mais le reste va pas être très important.
-          </p>
+          <div class="column">
+            <p>
+              Pendant cette année j'ai faite beaucoup de différent travaux.
+              Généralement j'ai adoré ma première session et j'ai hate pour la
+              prechaine.
+            </p>
+          </div>
+          <div class="column">
+            <p>
+              J'ai pas grand autre chose a dire, alors ce paragraphe est juste
+              pour mantré que les deux paragraphe marche. Alors vous pouvez
+              continué a lire, mais le reste va pas être très important.
+            </p>
+          </div>
         </div>
       </section>
       <section id="galery">
         <h2>Galerie</h2>
-        <img src="./assets/img/Kobe_City.jpg" alt="" />
-        <img src="./assets/img/Project_1_Tristan.jpg" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_Animal_Fusion.jpg" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_Animation.gif" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_Exercice_8.jpg" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_TP1.jpg" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_TP1_V2.jpg" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_TP2.jpg" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_TP2B_V1.jpg" alt="" />
-        <img src="./assets/img/Tristan_Bumpus_TP2B_V2.jpg" alt="" />
+        <img class="galery_imgs" src="./assets/img/Kobe_City.jpg" alt="" />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Project_1_Tristan.jpg"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_Animal_Fusion.jpg"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_Animation.gif"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_Exercice_8.jpg"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_TP1.jpg"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_TP1_V2.jpg"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_TP2.jpg"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_TP2B_V1.jpg"
+          alt=""
+        />
+        <img
+          class="galery_imgs"
+          src="./assets/img/Tristan_Bumpus_TP2B_V2.jpg"
+          alt=""
+        />
+        <img
+          id="big_img"
+          class="inv"
+          src="assets/img/Tristan_Bumpus_Exercice_8.jpg"
+          alt=""
+        />
       </section>
       <section id="video">
         <h2>Vidéo</h2>
@@ -94,6 +180,7 @@
 
     <footer>
       <section id="extra_game">
+        <h2>AutoRunner</h2>
         <p id="lvl"></p>
         <p id="desc"></p>
         <div id="game">
@@ -103,7 +190,7 @@
 
           <div id="selected_container">
             <p>Selected</p>
-            <p>Block plaçer:</p>
+            <p>Block placé:</p>
             <p id="blocks_placed"></p>
           </div>
         </div>
@@ -115,6 +202,7 @@
       </section>
     </footer>
 
+    <script src="./assets/js/img.js"></script>
     <script src="./assets/js/variables.js"></script>
     <script src="./assets/js/gamefunctions.js"></script>
     <script src="./assets/js/inputs_and_board_creation.js"></script>
