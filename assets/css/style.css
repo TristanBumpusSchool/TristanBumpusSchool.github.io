@@ -13,7 +13,7 @@
   --link_size: 1.2vw;
   --article_width: 30vw;
   --article_margin: 2.5vw;
-  --big_height: 50vh;
+  --big_height: 100vh;
   --big_width: fit-content;
   --big_translate: 25vw;
 }
@@ -48,26 +48,40 @@ body {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  z-index: 2;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
+  display: flex;
+  position: fixed;
   background-color: black;
   top: 0;
   width: 100vw;
   height: 5vh;
   align-content: center;
   z-index: 4;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 
 ul {
-  width: 100vw;
   height: 5vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20vw;
+}
+
+li {
+  vertical-align: middle;
+  height: 5vh;
   align-content: center;
+}
+
+li:hover {
+  transition: all 200ms ease;
+  transform: scale(1.2) translatey(-0.5vh);
 }
 
 section {
@@ -110,6 +124,7 @@ a {
   text-decoration: none;
   font-size: var(--link_size);
   color: aliceblue;
+  z-index: 1;
 }
 
 a:hover {
@@ -162,6 +177,13 @@ td {
   text-align: center;
 }
 
+footer a {
+  color: red;
+  display: block;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
 /*Scroll bar*/
 
 ::-webkit-scrollbar {
@@ -184,6 +206,21 @@ td {
 .flex {
   display: flex;
   justify-content: space-evenly;
+}
+
+.flexy {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  gap: 2vw;
+}
+
+.flexy img {
+  width: 2vw;
+}
+
+.flexy a {
+  margin: 0;
 }
 
 .column {
@@ -221,6 +258,7 @@ td {
 
 #menu {
   display: none;
+  position: absolute;
   background-color: green;
   padding: 2vh;
   flex-direction: column;
@@ -228,10 +266,10 @@ td {
 }
 
 #menu_button {
-  position: absolute;
   display: flex;
   gap: 1vh;
   flex-direction: column;
+  align-self: center;
 }
 
 #menu_button:hover #menu {
