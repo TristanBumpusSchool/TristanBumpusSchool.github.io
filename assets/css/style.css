@@ -41,7 +41,6 @@
 
 * {
   font-family: "Hind Mysuru";
-  color: yellow;
 }
 
 /*Types*/
@@ -106,6 +105,7 @@ h1 {
   text-align: center;
   width: var(--section_width);
   font-size: var(--large_font);
+  color: yellow;
   font-family: "Hind Mysuru";
 }
 
@@ -114,6 +114,7 @@ h2 {
   width: var(--section_width);
   font-size: var(--mid_font);
   margin-bottom: 2vh;
+  color: yellow;
   font-family: "Hind Mysuru";
 }
 
@@ -122,7 +123,12 @@ h3 {
   width: var(--section_width);
   font-size: var(--small_font);
   margin: 0 2vh;
+  color: yellow;
   font-family: "Hind Mysuru";
+}
+
+label {
+  color: yellow;
 }
 
 p {
@@ -130,6 +136,7 @@ p {
   font-size: var(--small_font);
   margin-bottom: 5vh;
   text-justify: newspaper;
+  color: yellow;
   font-family: "Hind Mysuru";
 }
 
