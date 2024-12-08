@@ -1,5 +1,5 @@
 @import url(./restet.css);
-
+@import url("https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap");
 /*Medias*/
 
 :root {
@@ -37,7 +37,6 @@
 }
 
 /*Font*/
-@import url("https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap");
 
 * {
   font-family: "Hind Mysuru";
@@ -52,11 +51,6 @@ body {
   background-image: linear-gradient(90deg, #f5e600, #f5ab00);
 }
 
-header {
-  padding: 0;
-  margin: 0;
-}
-
 nav {
   display: flex;
   position: fixed;
@@ -66,8 +60,6 @@ nav {
   height: 5vh;
   align-content: center;
   z-index: 4;
-  margin: 0;
-  padding: 0;
   justify-content: center;
 }
 
@@ -106,16 +98,17 @@ h1 {
   width: var(--section_width);
   font-size: var(--large_font);
   color: yellow;
-  font-family: "Hind Mysuru";
+  padding-top: 1vh;
 }
 
 h2 {
+  padding-top: 1vh;
   text-align: center;
   width: var(--section_width);
   font-size: var(--mid_font);
   margin-bottom: 2vh;
-  color: yellow;
   font-family: "Hind Mysuru";
+  color: yellow;
 }
 
 h3 {
@@ -124,7 +117,6 @@ h3 {
   font-size: var(--small_font);
   margin: 0 2vh;
   color: yellow;
-  font-family: "Hind Mysuru";
 }
 
 label {
@@ -137,7 +129,6 @@ p {
   margin-bottom: 5vh;
   text-justify: newspaper;
   color: yellow;
-  font-family: "Hind Mysuru";
 }
 
 a {
@@ -145,8 +136,8 @@ a {
   text-decoration: none;
   font-size: var(--link_size);
   color: aliceblue;
-  z-index: 1;
   font-family: "Hind Mysuru";
+  z-index: 1;
 }
 
 a:hover {
@@ -204,7 +195,6 @@ td {
   border: 1px solid black;
   text-align: center;
   margin: 0;
-  font-family: "Hind Mysuru";
 }
 
 th {
