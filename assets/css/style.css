@@ -41,6 +41,7 @@
 
 * {
   font-family: "Hind Mysuru";
+  color: yellow;
 }
 
 /*Types*/
@@ -198,11 +199,11 @@ td {
 }
 
 th {
-  color: aliceblue;
+  color: red;
 }
 
 td {
-  color: aqua;
+  color: red;
 }
 
 footer a {
@@ -352,6 +353,11 @@ footer a {
 }
 
 #video {
+  height: auto;
+  min-height: 100vh;
+}
+
+#article {
   height: auto;
   min-height: 100vh;
 }
