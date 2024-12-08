@@ -8,14 +8,14 @@
   --small_font: 1.2vw;
   --section_margin: 15vw;
   --section_width: 70vw;
-  --img_margin: 1vh;
   --galery_height: 110vw;
   --link_size: 1.2vw;
-  --article_width: 30vw;
-  --article_margin: 2.5vw;
+  --article_width: 20vw;
+  --article_margin: 7.5vw;
   --big_height: 100vh;
   --big_width: fit-content;
   --big_translate: 25vw;
+  --galery_width: 49vw;
 }
 
 @media (max-width: 600px) {
@@ -25,7 +25,6 @@
     --small_font: 2.2vh;
     --section_margin: 0;
     --section_width: 100vw;
-    --img_margin: 1vw;
     --galery_height: 110vh;
     --link_size: 1.2vh;
     --article_width: 40vw;
@@ -33,10 +32,16 @@
     --big_height: fit-content;
     --big_width: 50vw;
     --big_translate: 50%;
+    --galery_width: 50vw;
   }
 }
 
-/*Animations*/
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Hind Mysuru";
+}
 
 /*Types*/
 
@@ -44,7 +49,7 @@ html,
 body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  background-image: linear-gradient(90deg, red, blue);
+  background-image: linear-gradient(90deg, #f5e600, #f5ab00);
 }
 
 header {
@@ -90,27 +95,33 @@ section {
   flex-wrap: wrap;
   height: 95vh;
   padding-top: 5vh;
-  background-color: rebeccapurple;
+  background-color: #0002f5;
   scroll-snap-align: start;
   margin: 0 var(--section_margin);
+  max-width: 100vw;
 }
 
 h1 {
   text-align: center;
   width: var(--section_width);
   font-size: var(--large_font);
+  font-family: "Hind Mysuru";
 }
 
 h2 {
   text-align: center;
   width: var(--section_width);
   font-size: var(--mid_font);
+  margin-bottom: 2vh;
+  font-family: "Hind Mysuru";
 }
 
 h3 {
   text-align: center;
   width: var(--section_width);
   font-size: var(--small_font);
+  margin: 0 2vh;
+  font-family: "Hind Mysuru";
 }
 
 p {
@@ -118,9 +129,11 @@ p {
   font-size: var(--small_font);
   margin-bottom: 5vh;
   text-justify: newspaper;
+  font-family: "Hind Mysuru";
 }
 
 a {
+  transition: all ease 200ms;
   text-decoration: none;
   font-size: var(--link_size);
   color: aliceblue;
@@ -130,6 +143,11 @@ a {
 a:hover {
   transition: all 200ms ease;
   transform: scale(1.2) translatey(-0.5vh);
+}
+
+a:active {
+  transition: all ease 200ms;
+  color: red;
 }
 
 input {
@@ -145,6 +163,7 @@ form {
   width: var(--section_width);
   align-self: center;
   justify-self: center;
+  margin-bottom: 30vh;
 }
 
 label {
@@ -157,6 +176,7 @@ video {
   align-self: center;
   justify-self: center;
   margin: auto;
+  padding: 2vh 0;
 }
 
 footer h2,
@@ -167,14 +187,22 @@ footer h3 {
 table {
   border: 1px solid black;
   width: 100%;
-  align-self: center;
-  justify-content: center;
+  margin-bottom: 50vh;
 }
 
 th,
 td {
   border: 1px solid black;
   text-align: center;
+  margin: 0;
+}
+
+th {
+  color: aliceblue;
+}
+
+td {
+  color: aqua;
 }
 
 footer a {
@@ -228,11 +256,16 @@ footer a {
   margin: var(--article_margin);
 }
 
+.column img {
+  width: var(--article_width);
+}
+
 .big {
   display: block;
   width: var(--big_width);
   height: var(--big_height);
   left: 0;
+  max-width: 50vw;
 }
 
 .inv {
@@ -240,9 +273,9 @@ footer a {
 }
 
 .galery_imgs {
-  width: 30%;
+  width: 25%;
   height: fit-content;
-  margin: var(--img_margin);
+  margin: 1%;
   filter: grayscale();
   z-index: 0;
 }
@@ -259,10 +292,12 @@ footer a {
 #menu {
   display: none;
   position: absolute;
-  background-color: green;
+  background-color: #3b3b75;
   padding: 2vh;
   flex-direction: column;
   gap: 0.5vh;
+  border: #75723b solid 1vh;
+  z-index: 1;
 }
 
 #menu_button {
@@ -289,11 +324,14 @@ footer a {
 #galery {
   height: auto;
   min-height: 100vh;
+  width: var(--galery_width);
+  margin-left: 50vw;
+  justify-content: space-evenly;
 }
 
 #table {
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #subscipe {
@@ -311,4 +349,9 @@ footer a {
 
 #logo {
   height: 5vh;
+}
+
+#video {
+  height: auto;
+  min-height: 100vh;
 }

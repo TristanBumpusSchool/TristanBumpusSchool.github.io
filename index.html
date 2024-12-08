@@ -42,6 +42,7 @@
         <p>Ma première session au CÉGEP</p>
         <p>Tp2</p>
         <p>Tristan Bumpus</p>
+        <p>582-1W1 - Mise en page Web</p>
         <p>
           Techniques d'intégration multimédia, Collège de Maisonneuve, automne
           2024
@@ -71,6 +72,8 @@
             placeholder="Nombre"
             required
           />
+          <label for="date">Date d'aujourd'hui</label>
+          <input type="date" name="date" id="date" />
           <input type="reset" value="Recommence" />
           <input id="subscipe" type="submit" value="✅" />
         </form>
@@ -78,44 +81,102 @@
       <section id="table">
         <h2>Tableau</h2>
         <table>
-          <tr>
-            <th>Hello</th>
-          </tr>
-          <tr>
-            <td>test</td>
-            <td>test2</td>
-            <td>test2</td>
-            <td>test2</td>
-          </tr>
-          <tr>
-            <td>test</td>
-            <td>test2</td>
-            <td>test2</td>
-            <td>test2</td>
-          </tr>
-          <tr>
-            <td>test</td>
-            <td>test2</td>
-            <td>test2</td>
-            <td>test2</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Cours</th>
+              <th>Fun</th>
+              <th># de Projet</th>
+              <th>Défficulter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Création Vidéo</td>
+              <td>10/10</td>
+              <td>3</td>
+              <td>5/10</td>
+            </tr>
+            <tr>
+              <td>Animation et interactivité en jeu</td>
+              <td>1/10</td>
+              <td>1</td>
+              <td>1/10</td>
+            </tr>
+            <tr>
+              <td>Conception graphique wt imagerie matricielle</td>
+              <td>7/10</td>
+              <td>3</td>
+              <td>6/10</td>
+            </tr>
+            <tr>
+              <td>Mise en page web</td>
+              <td>10/10</td>
+              <td>2</td>
+              <td>6/10</td>
+            </tr>
+            <tr>
+              <td>Anglais</td>
+              <td>9/10</td>
+              <td>1</td>
+              <td>1/10</td>
+            </tr>
+            <tr>
+              <td>Français</td>
+              <td>1/10</td>
+              <td>0</td>
+              <td>10/10</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Cours</th>
+              <th>Fun</th>
+              <th># de Projet</th>
+              <th>Défficulter</th>
+            </tr>
+          </tfoot>
         </table>
       </section>
       <section id="article">
         <h1>Porfolio</h1>
+        <h3>Ma première session au CÉGEP</h3>
         <div class="flex">
           <div class="column">
             <p>
-              Pendant cette année j'ai faite beaucoup de différent travaux.
-              Généralement j'ai adoré ma première session et j'ai hate pour la
-              prechaine.
+              Ma première session au cégep dans le programme d’intégration
+              multimédia a été à la fois enrichissante et stimulante. Dès les
+              premiers cours, j’ai découvert un univers créatif où se mêlaient
+              design graphique, programmation et production audiovisuelle.
+              Apprendre à utiliser des outils comme Photoshop,
+            </p>
+            <img src="./assets/img/Kobe_City.jpg" alt="" />
+            <p>
+              Premiere Pro et des langages de codage m’a permis de développer
+              des compétences concrètes tout en explorant mon imagination.Bien
+              que certains projets aient été exigeants, ils m’ont offert
+              l’occasion de travailler en équipe et de relever des défis
+              techniques. Cette session a confirmé ma passion pour le domaine et
+              m’a motivé à continuer à repousser mes limites pour créer du
+              contenu innovant et interactif.
             </p>
           </div>
           <div class="column">
+            <hr />
             <p>
-              J'ai pas grand autre chose a dire, alors ce paragraphe est juste
-              pour mantré que les deux paragraphe marche. Alors vous pouvez
-              continué a lire, mais le reste va pas être très important.
+              En plus des apprentissages techniques, j’ai également beaucoup
+              appris sur la gestion du temps et l’organisation, car jongler
+              entre les différents projets, les échéances serrées et les cours
+              théoriques demandait une discipline rigoureuse. Les échanges avec
+              mes collègues de classe ont aussi été une source d’inspiration et
+              de motivation, car chacun apportait des idées uniques et des
+              perspectives variées aux travaux d’équipe. Les enseignants,
+              passionnés et disponibles, ont su guider et encourager notre
+              créativité tout en nous transmettant des bases solides pour bâtir
+              une carrière dans ce domaine. Cette première session m’a non
+              seulement permis de découvrir des outils et des techniques, mais
+              aussi de me projeter dans un futur où je pourrais allier mes
+              compétences techniques et mon sens artistique pour créer des
+              expériences numériques captivantes.
             </p>
           </div>
         </div>
@@ -183,7 +244,8 @@
         <h2>Vidéo</h2>
         <h3>Zombie</h3>
         <video src="./assets/video/sequence_zombie.mp4" controls></video>
-        <h3>Un film créé par Tristan Bumpus Xavier et Loïc</h3>
+        <h3>Amitié par une bière</h3>
+        <h3>Des film créé par Tristan Bumpus Xavier Rémy et Loïc Kamguin</h3>
       </section>
     </main>
 
