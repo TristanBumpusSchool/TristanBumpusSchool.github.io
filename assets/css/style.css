@@ -206,15 +206,15 @@ td {
 }
 
 th {
-  color: red;
+  color: yellow;
 }
 
 td {
-  color: red;
+  color: yellow;
 }
 
 footer a {
-  color: red;
+  color: yellow;
   display: block;
   margin: 0 auto;
   text-decoration: underline;
