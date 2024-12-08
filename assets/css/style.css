@@ -146,6 +146,7 @@ a {
   font-size: var(--link_size);
   color: aliceblue;
   z-index: 1;
+  font-family: "Hind Mysuru";
 }
 
 a:hover {
@@ -203,10 +204,11 @@ td {
   border: 1px solid black;
   text-align: center;
   margin: 0;
+  font-family: "Hind Mysuru";
 }
 
 th {
-  color: yellow;
+  color: aliceblue;
 }
 
 td {
