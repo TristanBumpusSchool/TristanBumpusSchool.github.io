@@ -321,18 +321,26 @@ function move_enemy(lvl_current) {
         move_amount = move_amount * -1;
       }
       print(lvl_current[self_location - move_amount]);
-      if (
-        (side_edge_tiles_right.indexOf(self_location) != -1 &&
-          lvl_current[self_location - move_amount].includes("wall")) ||
-        (side_edge_tiles_left.indexOf(self_location) != -1 &&
-          lvl_current[self_location - move_amount].includes("wall")) ||
-        (lvl_current[self_location - move_amount].includes("wall") &&
-          self_location < 10) ||
-        (lvl_current[self_location - move_amount].includes("wall") &&
-          self_location > 72)
-      ) {
-        can_move = false;
+
+      if (lvl_current[self_location - move_amount] != null) {
+        if (
+          (side_edge_tiles_right.indexOf(self_location) != -1 &&
+            lvl_current[self_location - move_amount].includes("wall") &&
+            direction == "right") ||
+          (side_edge_tiles_left.indexOf(self_location) != -1 &&
+            lvl_current[self_location - move_amount].includes("wall") &&
+            direction == "left") ||
+          (lvl_current[self_location - move_amount].includes("wall") &&
+            self_location < 10 &&
+            direction == "up") ||
+          (lvl_current[self_location - move_amount].includes("wall") &&
+            self_location > 72 &&
+            direction == "down")
+        ) {
+          can_move = false;
+        }
       }
+
       //Direction Check
 
       if (move_amount ** 2 == 1 || move_amount ** 2 == 4) {
