@@ -123,15 +123,15 @@
 }
 
 #extra_game .left {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 #extra_game .down {
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 
 #extra_game .up {
-  rotate: 270deg;
+  transform: rotate(270deg);
 }
 
 #extra_game .reset {

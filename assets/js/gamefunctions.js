@@ -320,7 +320,19 @@ function move_enemy(lvl_current) {
       ) {
         move_amount = move_amount * -1;
       }
-
+      print(lvl_current[self_location - move_amount]);
+      if (
+        (side_edge_tiles_right.indexOf(self_location) != -1 &&
+          lvl_current[self_location - move_amount].includes("wall")) ||
+        (side_edge_tiles_left.indexOf(self_location) != -1 &&
+          lvl_current[self_location - move_amount].includes("wall")) ||
+        (lvl_current[self_location - move_amount].includes("wall") &&
+          self_location < 10) ||
+        (lvl_current[self_location - move_amount].includes("wall") &&
+          self_location > 72)
+      ) {
+        can_move = false;
+      }
       //Direction Check
 
       if (move_amount ** 2 == 1 || move_amount ** 2 == 4) {
@@ -360,12 +372,18 @@ function move_enemy(lvl_current) {
           ).classList.value += " bounce";
         }
 
-        if (!lvl_start[self_location].includes("enemy")) {
+        if (
+          !lvl_start[self_location].includes("enemy") &&
+          !lvl_start[self_location].includes("player")
+        ) {
           lvl_current[self_location] = lvl_start[self_location];
           document.getElementById(String(self_location)).classList =
             lvl_start[self_location];
         }
-        if (lvl_start[self_location].includes("enemy")) {
+        if (
+          lvl_start[self_location].includes("enemy") ||
+          lvl_start[self_location].includes("player")
+        ) {
           lvl_current[self_location] = default_tile;
           document.getElementById(String(self_location)).classList =
             default_tile;
@@ -386,8 +404,11 @@ function load_lvl(lvl_to_load) {
   blocks_placed = 0;
   update_blocks_placed();
   play_game = false;
+  lvl_start = [];
   if (lvls.length < lvl_to_load) {
     print("S");
+    document.querySelector("#game").classList += "invisible";
+    document.querySelector("#ending").classList = "";
   } else {
     document.querySelectorAll(".tile").forEach(function (self) {
       var tile_to_be;
